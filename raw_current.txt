@@ -1,0 +1,88 @@
+INIT:/scoreboard objectives add red dummy
+INIT:/scoreboard objectives add orange dummy
+INIT:/scoreboard objectives add yellow dummy
+INIT:/scoreboard objectives add lime dummy
+INIT:/scoreboard objectives add green dummy
+INIT:/scoreboard objectives add blue dummy
+INIT:/scoreboard objectives add cyan dummy
+INIT:/scoreboard objectives add lightblue dummy
+INIT:/scoreboard objectives add gray dummy
+INIT:/scoreboard objectives add black dummy
+INIT:/scoreboard objectives add white dummy
+INIT:/scoreboard objectives add purple dummy
+INIT:/scoreboard objectives add pink dummy
+INIT:/scoreboard objectives add lightgray dummy
+INIT:/scoreboard objectives add magenta dummy
+INIT:/scoreboard objectives add brown dummy
+INIT:/scoreboard objectives add Arrow dummy
+INIT:/scoreboard players add @a red 1
+INIT:/scoreboard players add @a orange 1
+INIT:/scoreboard players add @a yellow 1
+INIT:/scoreboard players add @a lime 1
+INIT:/scoreboard players add @a green 1
+INIT:/scoreboard players add @a blue 1
+INIT:/scoreboard players add @a cyan 1
+INIT:/scoreboard players add @a lightblue 1
+INIT:/scoreboard players add @a gray 1
+INIT:/scoreboard players add @a black 1
+INIT:/scoreboard players add @a white 1
+INIT:/scoreboard players add @a purple 1
+INIT:/scoreboard players add @a pink 1
+INIT:/scoreboard players add @a lightgray 1
+INIT:/scoreboard players add @a magenta 1
+INIT:/scoreboard players add @a brown 1
+/scoreboard players add @e[type=Arrow,name=PKM] Arrow 1 {OnGround:1b}
+/kill @e[type=Arrow,name=PKM,score_Arrow_min=1]
+/stats entity @a set AffectedBlocks @a red
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 14
+/stats entity @a set AffectedBlocks @a orange
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 1
+/stats entity @a set AffectedBlocks @a yellow
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 4
+/stats entity @a set AffectedBlocks @a lime
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 5
+/stats entity @a set AffectedBlocks @a green
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 13
+/stats entity @a set AffectedBlocks @a blue
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 11
+/stats entity @a set AffectedBlocks @a cyan
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 9
+/stats entity @a set AffectedBlocks @a lightblue
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 3
+/stats entity @a set AffectedBlocks @a gray
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 7
+/stats entity @a set AffectedBlocks @a black
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 15
+/stats entity @a set AffectedBlocks @a white
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 0
+/stats entity @a set AffectedBlocks @a purple
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 10
+/stats entity @a set AffectedBlocks @a pink
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 6
+/stats entity @a set AffectedBlocks @a lightgray
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 8
+/stats entity @a set AffectedBlocks @a magenta
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 2
+/stats entity @a set AffectedBlocks @a brown
+/execute @a ~ ~ ~ /testforblock ~ ~-1 ~ stained_hardened_clay 12
+/kill @a[score_red_min=1]
+/effect @a[score_yellow_min=1] clear
+/effect @a[score_orange_min=1] 8 2 4
+/effect @a[score_lime_min=1] 1 2 4
+/effect @a[score_green_min=1] 19 2 4
+/effect @a[score_blue_min=1] 16 2 4
+/effect @a[score_cyan_min=1] 9 5 4
+/spawnpoint @a[score_lightblue_min=1]
+/effect @a[score_gray_min=1] 20 2 4
+/effect @a[score_black_min=1] 15 5 4
+/effect @a[score_white_min=1] 2 2 4
+/tp @a[score_purple_min=1] ~ ~5 ~
+/tp @a[score_pink_min=1] ~ ~-5 ~
+/execute @a[score_lightgray_min=1] ~ ~ ~ /summon Creeper ~ ~ ~ {Fuse:0,ExplosionRadius:5}
+/effect @a[score_lightgray_min=1] 11 5 127
+/effect @a[score_magenta_min=1] 7 5 4
+/execute @a[score_brown_min=1] ~ ~ ~ /summon Arrow ~ ~2 ~ {CustomName:PKM}
+/effect @a[score_brown_min=1] 11 5 127
+INIT:/tellraw @a {text:"Parkour Items!",color:orange,bold:true}
+INIT:/gamerule mobGriefing false
+INIT:/execute @p ~ ~ ~ summon Item ~ ~1 ~ {Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:12,tag:{display:{Name:"Shoot_Arrow"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:2,tag:{display:{Name:"Instant_Damage"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:8,tag:{display:{Name:"Explode"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:6,tag:{display:{Name:"Down_5_Meters"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:10,tag:{display:{Name:"Up_5_Meters"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:0,tag:{display:{Name:"The_End"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:15,tag:{display:{Name:"Blind"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:7,tag:{display:{Name:"Wither"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:3,tag:{display:{Name:"Checkpoint"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:9,tag:{display:{Name:"Nausea"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:11,tag:{display:{Name:"Night_Vision"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:13,tag:{display:{Name:"Poison"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:5,tag:{display:{Name:"Speed"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:4,tag:{display:{Name:"Clear_Effect"}}},Passengers:[{id:Item,Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:1,tag:{display:{Name:"Jump_Boost"}}},Passengers:[{id:"Item",Item:{id:"minecraft:stained_hardened_clay",Count:1,Damage:14,tag:{display:{Name:"Kill_You"}}}}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}
